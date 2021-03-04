@@ -24,6 +24,45 @@ body {
 .panel {
     background-size: auto 100%;
     background-position: center;
+    /*no repeat images on background*/
     background-repeat: no-repeat;
+    height: 85vh;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+    /*make images symmetrical*/
+    flex: 0.5;
+    margin: 10px;
+    /*to make position of h3 inside absolute*/
+    position: relative;
+    transition: flex 0.7s ease-in;
 }
 
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    /*move to bottom side of the section*/
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    /*make h3 tags invisible*/
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4), .panel:nth-of-type(5) {
+        display: none;
+    }
+}
