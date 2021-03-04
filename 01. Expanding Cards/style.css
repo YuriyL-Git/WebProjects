@@ -43,8 +43,8 @@ body {
     position: absolute;
     /*move to bottom side of the section*/
     bottom: 20px;
-    left: 20px;
-    margin: 0;
+    left: 10%;
+    margin: 0 auto;
     /*make h3 tags invisible*/
     opacity: 0;
 }
@@ -55,6 +55,7 @@ body {
 
 .panel.active h3 {
     opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
 }
 
 @media (max-width: 480px) {
